@@ -19,7 +19,7 @@ async def cmd_start(
     new_date_1,new_date_2 = inpud_date.state_10_0_0_5, inpud_date.state_10_0_0_50 #Присвоєння значеннь які надійшли із json
     if str(old_date_1) != str(new_date_1) and str(old_date_2) != str(new_date_2):
         old_date_1, old_date_2 = new_date_1, new_date_2
-        for chat in chats_id: #  відправлення повідомлення якщо одночано авторизовано >1 користувача
+        for chat in chats_id: #  відправлення повідомлення якщо одночано авторизовано =>1 користувача
             await bot.send_message(chat, f"Зміни зафіксовані в {ip_1} статус змінився на {new_date_1}, в {ip_2} статус змінився на {new_date_2} ")
     elif str(old_date_1) != str(new_date_1):
         old_date_1 = new_date_1
